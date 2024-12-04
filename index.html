@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <title>Number | Guessing | Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Enter Guessing Game</h1>
+        <p>
+          We have selected a random number between
+          <span class="number">1</span> to <span class="number">100</span>.See
+          if you can guess
+        </p>
+      </header>
+
+      <div class="form">
+        <label for="guessField">Enter a guess</label>
+        <input type="text" id="guessField" class="guessField" />
+        <input type="submit" value="Submit guess" class="guessSubmit" />
+      </div>
+
+      <div class="resultParams">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </div>
+
+      <div class="resetGame__container">
+        <button class="resetGame__button">Reset Game</button>
+      </div>
+
+      <div class="winnerResult__container hidden">
+        <h1>You Won 🏆</h1>
+        <p>click anywhere to play</p>
+      </div>
+      <div class="loserResult__container hidden">
+        <h1>You Loose 💩</h1>
+        <p>click anywhere to play</p>
+      </div>
+    </div>
+  </body>
+</html>

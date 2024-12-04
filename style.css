@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #eee;
+  background-color: #222;
+}
+.container {
+  border: 1px solid rgb(234, 225, 225);
+  width: 100%;
+  max-width: 660px;
+  min-height: 300px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 0em 1em;
+
+  position: relative;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header h1 {
+  font-weight: 700;
+}
+.header p {
+  font-weight: 600;
+  text-align: center;
+  color: rgb(236, 236, 121);
+}
+.number {
+  /* font-weight: 800; */
+  color: blue;
+  font-size: 1.5rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.guessField {
+  padding: 0.2em;
+  width: 80px;
+  font-size: 1.5rem;
+}
+.guessSubmit {
+  padding: 0.5em;
+  cursor: pointer;
+}
+.resetGame__button {
+  cursor: pointer;
+  padding: 0.5em;
+}
+.winnerResult__container {
+  padding: 2.5em 1em;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  animation: slideDown 0.5s ease forwards;
+  gap: 1em;
+}
+.loserResult__container {
+  padding: 2.5em 1em;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  animation: slideDown 0.5s ease forwards;
+  gap: 1em;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 400px) {
+  .header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
